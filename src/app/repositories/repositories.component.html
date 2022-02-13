@@ -1,6 +1,6 @@
 <div *ngIf="repositories">
     <h6>Repositories</h6>
-    <ul *ngFor="let repo of repositories">
-        <li><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a> </li>
-    </ul>
+    <div> *ngFor="let repo of repositories">
+        <li><a href="{{repositories.html_url}}" target="_blank">{{repositories.name}}</a> </li>
+    </div>
 </div>
