@@ -8,6 +8,26 @@ import { GithubRequestService } from './service/github-request.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  user: any
+
+  userName!: string;
+  githubUser: any;
+  githubRepositories: any;
+
+  constructor(private githubService: GithubRequestService) {}
+
+  findGithub(user: User) {
+    this.userName = user.userName
+    console.log(this.userName)
+
+    this.githubService.getGithubUsers(this.userName).subscribe(data => {
+      this.githubUser = data
+      console.log(data)
+    })
+    
+    this.githubService.getRepositories(this.userName).subscribe(data => {
+      this.githubRepositories = data
+      console.log(data)
+    })
+    
+  }
 }
