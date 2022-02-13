@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { GithubRequestService } from '../service/github-request.service';
+
 
 @Component({
   selector: 'app-user',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  @Input() user: any
+
+  subscription:Subscription = new Subscription
+  users:any = [];
+  githubService: any;
+
+  constructor(githubService: GithubRequestService) { }
 
   ngOnInit(): void {
+    this.githubService.getGithubUsers()
+
+    this.subscription = this.githubService.getGithubInformation().subscribe((response:any)=>{
+      this.users = response
+    })
+    }
+
+    ngOnDestroy(){
+      this.subscription.unsubscribe();
+   }
+
+    
   }
 
-}
+
