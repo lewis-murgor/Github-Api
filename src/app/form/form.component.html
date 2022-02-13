@@ -3,7 +3,7 @@
         <div class="card-body">
             <h2>Github Search.</h2>
             <p>Enter your github user name below.</p>
-            <form action="">
+            <form #searchForm = 'ngForm'>
                 <div class="form-group">
                     <label for="user-name">User name:</label>
                     <input type="text" id="userName">
@@ -12,5 +12,5 @@
                 <button type="submit">Search</button>
             </form>
         </div>
-    </div> 
+    </div>
 </div>
