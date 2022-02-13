@@ -1,4 +1,9 @@
-<div *ngIf="users">
-    <h1>{{users.login}}</h1>
-    <p>{{users.followers}}</p>
+<div *ngIf="user">
+    <img src="{{user.avatar_url}}" alt="">
+    <div>
+        <h3>{{user.login}}</h3>    
+        <p>Followers: {{user.followers}}</p>
+        <p>Following: {{user.following}}</p>
+        <p>Public repositories: {{user.public_repos}}</p>
+    </div>
 </div>
