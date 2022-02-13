@@ -1,1 +1,4 @@
-<app-form></app-form>
+<app-form (inputtedUser)="findGithub($event)"></app-form>
+
+<app-user [user]="githubUser"></app-user>
+<app-repositories [repositories]="githubRepositories"></app-repositories>
