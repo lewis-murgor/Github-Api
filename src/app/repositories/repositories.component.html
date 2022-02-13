@@ -1,1 +1,6 @@
-<p>repositories works!</p>
+<div *ngIf="repositories">
+    <h6>Repositories</h6>
+    <ul *ngFor="let repo of repositories">
+        <li><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a> </li>
+    </ul>
+</div>
