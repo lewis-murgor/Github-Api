@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from './classes/user';
+import { GithubRequestService } from './service/github-request.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Githubsearch';
+  
+  user: any
 }
