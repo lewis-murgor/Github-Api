@@ -6,7 +6,10 @@
             <form (ngSubmit)="searchUserName()" #searchForm = 'ngForm'>
                 <div class="form-group">
                     <label for="user-name">User name:</label>
-                    <input type="text" id="userName">
+                    <input type="text" id="userName" [(ngModel)]="user.userName" name="userName" #userName = 'ngModel' required>
+                    <div [hidden]="userName.valid || userName.pristine" class="alert alert-danger">
+                        <p>Github user name is required.</p>
+                    </div>
                 </div>
                 <br>
                 <button type="submit">Search</button>
