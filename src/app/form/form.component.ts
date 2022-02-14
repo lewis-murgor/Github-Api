@@ -8,13 +8,13 @@ import { User } from '../classes/user';
 })
 export class FormComponent implements OnInit {
 
-  user: User = new User("")
-
   @Output() inputtedUser = new EventEmitter<User>();
 
   searchUserName() {
     this.inputtedUser.emit(this.user)
   }
+
+  user = new User("")
 
   constructor() { }
 
