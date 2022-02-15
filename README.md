@@ -1,27 +1,33 @@
-# Githubsearch
+# GitHub Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+#### An app that displays github information from an inputted username.
 
-## Development server
+## Description
+This is an app that shows user github information from inputted github username. A user is required to input a github username and search to view information of the username he/she has inputted.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Setup/Installation Requirements
+* Go to any browser.
+* Input the link   in the adress bar.
 
-## Code scaffolding
+## Live Site
+The link to the live site on gh-pages is .
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Known Bugs
+There are no known bugs at the moment.
 
-## Build
+## Technologies Used
+* HTML
+* css
+* Typescript
+* Angular CLI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Contact details
+You can reach me through the email adress kiplagatlewis29@gmail.com 
 
-## Running unit tests
+### License
+You can check the licence [here]().
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+##
+Copyright (c) {2022}
+#
+ By **Lewis Murgor**
