@@ -1,19 +1,12 @@
-<div class="container">
-    <div class="card">
-        <div class="card-body">
-            <h2>Github Search.</h2>
-            <p>Enter your github user name below.</p>
-            <form (ngSubmit)="searchUserName()" #searchForm = 'ngForm'>
-                <div class="form-group">
-                    <label for="user-name">User name:</label>
-                    <input type="text" id="userName" [(ngModel)]="user.userName" name="userName" #userName = 'ngModel' required>
-                    <div [hidden]="userName.valid || userName.pristine" class="alert alert-danger">
-                        <p>Github user name is required.</p>
-                    </div>
-                </div>
-                <br>
-                <button type="submit">Search</button>
-            </form>
-        </div>
+<p>Enter your github user name below.</p>
+<form (ngSubmit)="searchUserName()" #searchForm = 'ngForm'>
+    <div class="form-group">
+        <label for="userName">User name:</label>
+        <input type="text" id="userName" [(ngModel)]="newUser.login" name="userName" #userName = 'ngModel' required>
     </div>
-</div>
+    <br>
+    <div class="search"><button type="submit" class="btn btn-primary">Search</button></div>
+</form>
+    
+            
+        
