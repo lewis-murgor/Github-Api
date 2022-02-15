@@ -1,4 +1,6 @@
-<app-form (inputtedUser)="findGithub($event)"></app-form>
+<app-navbar></app-navbar>
+<h2>GitHub Search</h2>
+<p>This is an app that displays a user's github information.</p>
+<p>You are required to input your github username and search to find see your github information.</p>
+<router-outlet></router-outlet>
 
-<app-user [user]="githubUser"></app-user>
-<app-repositories [repositories]="githubRepositories"></app-repositories>
