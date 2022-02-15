@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from '../classes/user';
 
 
 
@@ -8,11 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
-  @Input() user: any
-
   
-
+  @Input() user!: User;
+  
+  displayNewUser(user: User) {
+    this.user.created_at = new Date(user.created_at)
+  }
   constructor() { }
 
   ngOnInit(): void {
