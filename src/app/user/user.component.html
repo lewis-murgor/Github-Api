@@ -1,9 +1,21 @@
-<div *ngIf="user">
-    <img src="{{user.avatar_url}}" alt="">
-    <div>
-        <h3>{{user.login}}</h3>    
-        <p>Followers: {{user.followers}}</p>
-        <p>Following: {{user.following}}</p>
-        <p>Public repositories: {{user.public_repos}}</p>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <app-form (displayUser)="displayNewUser($event)"></app-form>
+        </div>
     </div>
+    <br>
+    <div class="display">
+        <div *ngIf="user.login">
+            <img src="{{user.avatar_url}}" alt="">
+            <p>User name: <strong>{{user.login}}</strong></p>
+            <p>Public repositories: {{user.public_repos}}</p>
+            <br>
+            <button><a href="{{user.html_url}}"></a>Check Github account.</button>
+        </div>
+    </div>   
 </div>
+
+
+
+
