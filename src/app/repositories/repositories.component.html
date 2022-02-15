@@ -1,6 +1,13 @@
-<div *ngIf="repositories">
-    <h6>Repositories</h6>
-    <div> *ngFor="let repo of repositories">
-        <li><a href="{{repositories.html_url}}" target="_blank">{{repositories.name}}</a> </li>
+<div class="container">
+    <div *ngFor="let repoDetail of repoDetails">
+        <div class="card">
+            <div class="card-body">
+                <h3>{{repoDetail.name}}</h3>
+                <p>{{repoDetail.description}}</p>
+                <p>Language: {{repoDetail.language}}</p>
+                <p><a href="{{repoDetail.html_url}}">Repository.</a></p>
+                <p>Updated on {{repoDetail.Updated}}</p>
+            </div>
+        </div>
     </div>
 </div>
