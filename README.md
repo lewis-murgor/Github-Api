@@ -25,7 +25,7 @@ There are no known bugs at the moment.
 You can reach me through the email adress kiplagatlewis29@gmail.com 
 
 ### License
-You can check the licence [here]().
+You can check the licence [here](https://github.com/lewis-murgor/Github-Api/blob/master/Licence).
 
 ##
 Copyright (c) {2022}
