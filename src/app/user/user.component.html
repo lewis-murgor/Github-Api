@@ -8,8 +8,9 @@
     <div class="display">
         <div *ngIf="user.login">
             <img src="{{user.avatar_url}}" alt="">
-            <p>User name: <strong>{{user.login}}</strong></p>
+            <p appHighlight>User name: <strong>{{user.login}}</strong></p>
             <p>Public repositories: {{user.public_repos}}</p>
+            <p>Updated on {{user.created_at|date}} which is {{user.created_at|dateDifference}}</p>
             <br>
             <button><a href="{{user.html_url}}"></a>Check Github account.</button>
         </div>
