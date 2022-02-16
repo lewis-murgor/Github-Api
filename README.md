@@ -7,10 +7,10 @@ This is an app that shows user github information from inputted github username.
 
 ## Setup/Installation Requirements
 * Go to any browser.
-* Input the link   in the adress bar.
+* Input the link https://lewis-murgor.github.io/Github-Api/ in the adress bar.
 
 ## Live Site
-The link to the live site on gh-pages is .
+The link to the live site on gh-pages is https://lewis-murgor.github.io/Github-Api/.
 
 ## Known Bugs
 There are no known bugs at the moment.
