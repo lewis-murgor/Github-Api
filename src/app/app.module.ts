@@ -9,7 +9,6 @@ import { UserComponent } from './user/user.component';
 import { FormComponent } from './form/form.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { HighlightDirective } from './highlight.directive';
 import { DateDifferencePipe } from './date-difference.pipe';
 
@@ -20,7 +19,6 @@ import { DateDifferencePipe } from './date-difference.pipe';
     FormComponent,
     RepositoriesComponent,
     NavbarComponent,
-    NotFoundComponent,
     HighlightDirective,
     DateDifferencePipe,
   ],
