@@ -1,8 +1,8 @@
 <p>Enter your github user name below.</p>
-<form (ngSubmit)="searchUserName(userName)">
+<form (ngSubmit)="searchUserName(userName)" #searchForm = 'ngForm'>
     <div class="form-group">
         <label for="userName">User name:</label>
-        <input type="text" id="userName">
+        <input type="text" id="userName" [(ngModel)]="userName" name="userName">
     </div>
     <br>
     <div class="search"><button type="submit" class="btn btn-primary">Search</button></div>
