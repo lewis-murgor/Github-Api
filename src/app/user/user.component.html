@@ -20,14 +20,13 @@
                         <p>Following: {{user.following}}</p>
                         <p>Repositories: {{user.public_repos}}</p>
                         <p>Created on {{user.created_at| date}}</p>
-                        <a href="{{user.html_url}}" class="btn btn-success">Github profile</a>
                     </div> 
                 </div>
-            </div>  
+            </div> 
         </div>
+        <div class="button"><a href="{{user.html_url}}" class="btn btn-success">Github profile</a></div>
+        <app-repositories></app-repositories>
     </div>
-        
-    <app-repositories></app-repositories>
 </div>
                     
                 
