@@ -1,8 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { User } from '../classes/user';
-import { GithubRequestService } from '../service/github-request.service';
-import { UserComponent } from '../user/user.component';
-
 
 @Component({
   selector: 'app-form',
@@ -11,26 +8,17 @@ import { UserComponent } from '../user/user.component';
 })
 export class FormComponent implements OnInit {
 
-  @Output() displayUser = new EventEmitter<User>();
+  userName!: string;
 
-  user!: User;
-  userName!: string
-  githubService!: GithubRequestService;
+  @Output() displayUser = new EventEmitter<string>();
 
-  newUser = new User("", 0, "", "", new Date)
-
-  searchUserName(){
-    this.displayUser.emit(this.newUser)
-    this.githubService.getGithubInfo(this.userName)
+  searchUserName(userName: string) {
+    this.displayUser.emit(userName)
   }
 
-  constructor(githubService: GithubRequestService) {
-    this.githubService = githubService;
-   }
+  constructor() { }
 
   ngOnInit(): void {
-    this.githubService.getGithubInfo(this.userName)
-    this.user = this.githubService.user;
   }
 
 }
