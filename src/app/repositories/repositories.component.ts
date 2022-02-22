@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubRequestService } from '../service/github-request.service';
+import { Repo } from '../classes/repo';
 import { User } from '../classes/user';
 
 @Component({
@@ -9,17 +10,25 @@ import { User } from '../classes/user';
 })
 export class RepositoriesComponent implements OnInit {
 
-  user!: User;
-  repoDetails: any = [];
-  githubService!: GithubRequestService;
+  myGithub = 'lewis-murgor'
+  getGithubUser!: string;
 
-  constructor(githubService: GithubRequestService) {
-    this.githubService = githubService;
-   }
+  repositories!: Repo;
+  user!: User;
+  searchGithub!: string;
+
+  displayNewUser(userName: string) {
+    this.getGithubUser = "";
+    this.myGithub = userName;
+    this.ngOnInit();
+  }
+
+  constructor(private githubService: GithubRequestService, public requestService: GithubRequestService) { }
 
   ngOnInit(): void {
-    this.user = this.githubService.user
-    this.repoDetails = this.githubService.repoData
+    this.githubService.getGithubUser(this.myGithub)
+    this.user = this.githubService.user;
+    this.requestService.getGithubRepositories(this.myGithub)
   }
 
 }
