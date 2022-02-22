@@ -13,7 +13,7 @@ export class RepositoriesComponent implements OnInit {
   myGithub = 'lewis-murgor'
   getGithubUser!: string;
 
-  repositories!: Repo;
+  repository!: Repo;
   user!: User;
   searchGithub!: string;
 
