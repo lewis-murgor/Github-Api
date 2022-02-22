@@ -1,8 +1,8 @@
 <p>Enter your github user name below.</p>
-<form (ngSubmit)="searchUserName()" #searchForm = 'ngForm'>
+<form (ngSubmit)="searchUserName(userName)">
     <div class="form-group">
         <label for="userName">User name:</label>
-        <input type="text" id="userName" [(ngModel)]="newUser.login" name="userName" #userName = 'ngModel' required>
+        <input type="text" id="userName">
     </div>
     <br>
     <div class="search"><button type="submit" class="btn btn-primary">Search</button></div>
