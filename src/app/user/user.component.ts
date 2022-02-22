@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
+import { Repo } from '../classes/repo';
+import { GithubRequestService } from '../service/github-request.service';
 import { User } from '../classes/user';
-
-
 
 @Component({
   selector: 'app-user',
@@ -9,19 +9,26 @@ import { User } from '../classes/user';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  
-  @Input() user!: User;
-  
-  displayNewUser(user: User) {
-    this.user.created_at = new Date(user.created_at)
+
+  public myGithub = "lewis-murgor";
+  public getGithubUser!: string;
+
+  user!: User;
+  public searchGithub!: string;
+  repository!: Repo
+
+  displayNewUser(userName: string) {
+    this.myGithub = userName;
+    this.getGithubUser = "";
+    this.ngOnInit();
   }
-  constructor() { }
+
+  constructor(private githubService: GithubRequestService, public requestService: GithubRequestService) { }
 
   ngOnInit(): void {
+    this.githubService.getGithubUser(this.myGithub);
+    this.user = this.githubService.user;
+    this.requestService.getGithubRepositories(this.myGithub);
   }
 
-    
-    
-  }
-
-
+}
