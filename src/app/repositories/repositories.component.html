@@ -1,6 +1,6 @@
 
-<div *ngFor='let repositories for requestService.repoData'>
-    <a href="{{repositories.html_url}}">{{repositories.name}}</a>
-    <p>Description: {{repositories.description}}</p>
-    <p>Created on {{repositories.created_at | date}}</p>
+<div *ngFor='let repository of requestService.repoData'>
+    <a href="{{repository.html_url}}">{{repository.name}}</a>
+    <p>Description: {{repository.description}}</p>
+    <p>Created on {{repository.created_at | date}}</p>
 </div>
