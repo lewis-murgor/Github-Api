@@ -1,13 +1,6 @@
-<div class="container">
-    <div *ngFor="let repoDetail of repoDetails">
-        <div class="card">
-            <div class="card-body">
-                <h3>{{repoDetail.name}}</h3>
-                <p>{{repoDetail.description}}</p>
-                <p>Language: {{repoDetail.language}}</p>
-                <p><a href="{{repoDetail.html_url}}">Repository.</a></p>
-                <p>Updated on {{repoDetail.Updated}}</p>
-            </div>
-        </div>
-    </div>
+
+<div *ngFor='let repositories for requestService.repoData'>
+    <a href="{{repositories.html_url}}">{{repositories.name}}</a>
+    <p>Description: {{repositories.description}}</p>
+    <p>Created on {{repositories.created_at | date}}</p>
 </div>
